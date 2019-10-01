@@ -1,5 +1,5 @@
 {% set name = "xdesign" %}
-{% set version = "0.5.3" %}
+{% set version = "0.5.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/tomography/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: a39c51384162407bfa1308fd01e9e8b3242296a0c69c1d437583dcf12ea5d7e4
+  sha256: a79364c7d98996290cbde4d4c2a26b2ea17a7a65af5a11c56a0143ee0a1e7a97
 
 build:
   noarch: python
