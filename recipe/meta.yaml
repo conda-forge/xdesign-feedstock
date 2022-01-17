@@ -27,6 +27,7 @@ requirements:
     - numpy
     - python >=3
     - scipy
+    - setuptools  # for pkg_resources
 
 test:
   imports:
