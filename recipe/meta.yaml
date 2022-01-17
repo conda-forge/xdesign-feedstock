@@ -23,6 +23,7 @@ requirements:
     - setuptools_scm_git_archive
   run:
     - cached-property
+    - cycler
     - matplotlib-base
     - numpy
     - python >=3
