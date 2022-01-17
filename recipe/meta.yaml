@@ -1,5 +1,5 @@
 {% set name = "xdesign" %}
-{% set version = "0.5.4" %}
+{% set version = "0.5.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/tomography/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: a79364c7d98996290cbde4d4c2a26b2ea17a7a65af5a11c56a0143ee0a1e7a97
+  sha256: 13af4ea1fffff631c0f009d4e3242ac1e8c17054433ff88a27125e38dd1355be
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -23,10 +23,12 @@ requirements:
     - setuptools_scm_git_archive
   run:
     - cached-property
+    - cycler
     - matplotlib-base
     - numpy
     - python >=3
     - scipy
+    - setuptools  # for pkg_resources
 
 test:
   imports:
@@ -40,7 +42,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Benchmarking and optimization tools for tomography.'
+  summary: Benchmarking and optimization tools for tomography.
   description: |
     XDesign is an open-source Python package for creating x-ray imaging
     phantoms, simulating data acquisition, and benchmarking x-ray
